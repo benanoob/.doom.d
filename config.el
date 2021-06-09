@@ -73,12 +73,12 @@
 
 ;; (menu-bar-mode)
 
-;; (setq doom-font (font-spec :family "monospace" :size 16)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 16))
+(setq doom-font (font-spec :family "monospace" :size 16)
+      doom-variable-pitch-font (font-spec :family "sans" :size 16))
 
 (after! avy
   (setq avy-keys '(?q ?s ?d ?f ?g ?h ?j ?k ?l ?m))
-  (map! :g "C-t" #'avy-goto-char-timer)
+  (map! :g "M-s" #'avy-goto-char-timer)
 )
 
 ;; general lsp
@@ -88,7 +88,7 @@
       lsp-enable-symbol-highlighting nil
       )
 ;; trigger company completion
-(map! :g "C-SPC" #'company-complete)
+;; (map! :g "C-&" #'company-complete)
 ;;C module config
 (setq lsp-clients-clangd-args '("-j=3"
                                 "--background-index"
@@ -105,8 +105,17 @@
 ;; which key pops faster
 (setq which-key-idle-delay 0.5)
 
+;; snipe everything I can see and then let me repeat out of screen
+(after! evil-snipe
+  (setq evil-snipe-scope 'buffer)
+  (setq evil-snipe-repeat-scope 'whole-buffer))
 ;; keys for pane management
 ;;
-;; paragraph for azerty
-(map! :g "M-'" #'backward-paragraph)
-(map! :g "M-=" #'forward-paragraph)
+;; easier  paragraph movement for azerty
+;; (map! :g "M-'" #'backward-paragraph)
+;; (map! :g "M-=" #'forward-paragraph)
+
+;; other pane
+;; (map! :g "M-é" #'other-window)
+;; (map! :g "M-\"" #'+workspace/close-window-or-workspace)
+;; (map! :g "M-&" #'other-frame)
