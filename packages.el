@@ -56,3 +56,5 @@
 
 (package! gendoxy
   :recipe (:host github :repo "mp81ss/gendoxy"))
+
+(package! elcord :pin "afe8f31e2b9f78d13b22a695b7cf9c373656b85e")

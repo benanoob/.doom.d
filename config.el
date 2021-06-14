@@ -72,6 +72,7 @@
   (display-battery-mode 1))
 
 ;; (menu-bar-mode)
+;; (tool-bar-mode)
 
 (setq doom-font (font-spec :family "monospace" :size 16)
       doom-variable-pitch-font (font-spec :family "sans" :size 16))
@@ -100,7 +101,9 @@
 (after! lsp-clangd (set-lsp-priority! 'clangd 2))
 
 ;; doxygen
-(load "gendoxy.el") ;; doxygen plugin for C language TODO: put this in an after! statement
+;;(after! c-mode
+  (load "gendoxy.el")
+ ;; )
 
 ;; which key pops faster
 (setq which-key-idle-delay 0.5)
@@ -109,8 +112,9 @@
 (after! evil-snipe
   (setq evil-snipe-scope 'buffer)
   (setq evil-snipe-repeat-scope 'whole-buffer))
+
+(setq display-fill-column-indicator-column 80)
 ;; keys for pane management
-;;
 ;; easier  paragraph movement for azerty
 ;; (map! :g "M-'" #'backward-paragraph)
 ;; (map! :g "M-=" #'forward-paragraph)
