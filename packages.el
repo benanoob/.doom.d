@@ -11,7 +11,7 @@
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
-;; https://github.com/raxod502/straight.el#the-recipe-format
+;; https://github.com/radian-software/straight.el#the-recipe-format
 ;(package! another-package
 ;  :recipe (:host github :repo "username/repo"))
 
@@ -34,7 +34,7 @@
 
 ;; Specify a `:branch' to install a package from a particular branch or tag.
 ;; This is required for some packages whose default branch isn't 'master' (which
-;; our package manager can't deal with; see raxod502/straight.el#279)
+;; our package manager can't deal with; see radian-software/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
 ;; Use `:pin' to specify a particular commit to install.
@@ -48,13 +48,5 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
-;; calibre library link
-(package! calibredb :pin "a3b04c0c37...")
 
-;; epub reading major mode
-(package! nov :pin "b3c7cc28e9...")
-
-(package! gendoxy
-  :recipe (:host github :repo "mp81ss/gendoxy"))
-
-(package! elcord :pin "afe8f31e2b9f78d13b22a695b7cf9c373656b85e")
+(package! jetbrains-darcula-theme)
