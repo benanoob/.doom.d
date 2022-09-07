@@ -14,10 +14,7 @@
 ;;      Alternatively, press 'gd' (or 'C-c c d') on a module to browse its
 ;;      directory (for easy access to its source code).
 
-(setq native-comp-deferred-compilation t
-      straight-disable-native-compile t
-      native-comp-async-report-warnings-errors 'silent
-      native-comp-warning-on-missing-source nil)
+(setq native-comp-async-jobs-number 1)
 
 (doom! :input
        ;;bidi              ; (tfel ot) thgir etirw uoy gnipleh
