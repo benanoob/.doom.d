@@ -118,9 +118,10 @@
 
 (setq +doom-dashboard-ascii-banner-fn #'my-weebery-is-always-greater)
 
-(setq org-roam-directory "~/roam")
-
 (setq projectile-indexing-method 'alien)
 
 (setq-hook! 'python-mode-hook
   +format-with-lsp nil)
+
+(setq org-roam-directory "~/shared_folder/roam")
+(setq org-directory "~/shared_folder/org")
