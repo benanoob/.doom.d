@@ -123,5 +123,17 @@
 (setq-hook! 'python-mode-hook
   +format-with-lsp nil)
 
+;; org mode
 (setq org-roam-directory "~/shared_folder/roam")
 (setq org-directory "~/shared_folder/org")
+
+(after! org
+(setq org-todo-keywords '((sequence "TODO(t)" "PROJ(p)" "WAIT(w)" "HOLD(h)" "|" "DONE(d)" "CANCEL(c)")))
+
+(setq org-todo-keyword-faces '(
+("WAIT" . +org-todo-onhold)
+("HOLD" . +org-todo-onhold)
+("PROJ" . +org-todo-project)
+("CANCEL" . +org-todo-cancel))
+)
+)
