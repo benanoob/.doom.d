@@ -86,8 +86,10 @@
 (display-time-mode 1)                             ; Enable time in the mode-line
 (setq which-key-idle-delay 0.1) ;; I need the help, I really do
 
-(add-to-list 'default-frame-alist '(height . 60))
-(add-to-list 'default-frame-alist '(width . 120))
+
+(add-hook 'window-setup-hook #'toggle-frame-maximized)
+;; (add-to-list 'default-frame-alist '(height . 60))
+;; (add-to-list 'default-frame-alist '(width . 120))
 
 
 (defun my-weebery-is-always-greater ()
