@@ -124,6 +124,7 @@
 
 (setq-hook! 'python-mode-hook
   +format-with-lsp nil)
+(setenv "WORKON_HOME" "~/envs/")
 
 ;; org mode
 (setq org-roam-directory "~/shared_folder/roam")
