@@ -139,4 +139,6 @@
 ("PROJ" . +org-todo-project)
 ("CANCEL" . +org-todo-cancel))
 )
+
+(setq-default org-latex-pdf-process '("tectonic -Z shell-escape --outdir=%o %f"))
 )
