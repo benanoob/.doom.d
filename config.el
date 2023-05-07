@@ -6,7 +6,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "Bea"
+(setq user-full-name "John Doe"
       user-mail-address "john@doe.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
@@ -20,14 +20,10 @@
 ;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
+;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-
-
-(setq doom-font (font-spec :family "JetBrains Mono" :size 14)
-     doom-big-font (font-spec :family "JetBrains Mono" :size 36))
-
-
+;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -36,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'modus-vivendi)
+(setq doom-theme 'doom-one)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -87,7 +83,7 @@
 (setq which-key-idle-delay 0.1) ;; I need the help, I really do
 
 
-(add-hook 'window-setup-hook #'toggle-frame-maximized)
+;;(add-hook 'window-setup-hook #'toggle-frame-maximized)
 ;; (add-to-list 'default-frame-alist '(height . 60))
 ;; (add-to-list 'default-frame-alist '(width . 120))
 
@@ -127,8 +123,8 @@
 (setenv "WORKON_HOME" "~/envs/")
 
 ;; org mode
-(setq org-roam-directory "~/shared_folder/roam")
-(setq org-directory "~/shared_folder/org")
+(setq org-roam-directory "~/notes/roam")
+(setq org-directory "~/notes/org")
 
 (after! org
 (setq org-todo-keywords '((sequence "TODO(t)" "PROJ(p)" "WAIT(w)" "HOLD(h)" "|" "DONE(d)" "CANCEL(c)")))
